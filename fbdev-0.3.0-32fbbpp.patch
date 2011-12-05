@@ -1,0 +1,11 @@
+--- xf86-video-fbdev-0.3.0/src/fbdev.c.fbbpp	2006-08-28 20:32:56.000000000 -0400
++++ xf86-video-fbdev-0.3.0/src/fbdev.c	2006-08-28 21:32:52.000000000 -0400
+@@ -421,7 +421,7 @@
+ 		return FALSE;
+ 	default_depth = fbdevHWGetDepth(pScrn,&fbbpp);
+ 	if (!xf86SetDepthBpp(pScrn, default_depth, default_depth, fbbpp,
+-			     Support24bppFb | Support32bppFb | SupportConvert32to24 | PreferConvert32to24))
++			     Support24bppFb | Support32bppFb | SupportConvert32to24 | PreferConvert24to32))
+ 		return FALSE;
+ 	xf86PrintDepthBpp(pScrn);
+ 
